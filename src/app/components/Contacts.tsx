@@ -1,13 +1,16 @@
-import { FaWhatsapp, FaInstagram, FaFacebookSquare,FaYoutube } from "react-icons/fa";
+
+
+
+import { FaWhatsapp, FaInstagram, FaFacebookSquare, FaYoutube } from "react-icons/fa";
 
 const Contact = () => {
   return (
     <section id="contact" className="bg-gray-900 text-white py-10">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-8">Entre em Contato</h2>
 
         {/* Formulário de Contato */}
-        <form className="max-w-xl mx-auto mb-8">
+        <form className="w-full max-w-md md:max-w-xl mx-auto mb-8">
           <div className="mb-4">
             <label htmlFor="name" className="block text-sm font-medium mb-1">
               Nome
@@ -15,7 +18,8 @@ const Contact = () => {
             <input
               type="text"
               id="name"
-              className="w-full p-2 rounded-lg border-gray-300 focus:ring focus:ring-blue-500"
+              name="name"
+              className="w-full p-2 rounded-lg border border-gray-300 focus:ring focus:ring-blue-500"
               placeholder="Seu nome"
             />
           </div>
@@ -26,7 +30,8 @@ const Contact = () => {
             <input
               type="email"
               id="email"
-              className="w-full p-2 rounded-lg border-gray-300 focus:ring focus:ring-blue-500"
+              name="email"
+              className="w-full p-2 rounded-lg border border-gray-300 focus:ring focus:ring-blue-500"
               placeholder="Seu email"
             />
           </div>
@@ -36,7 +41,8 @@ const Contact = () => {
             </label>
             <textarea
               id="message"
-              className="w-full p-2 rounded-lg border-gray-300 focus:ring focus:ring-blue-500"
+              name="message"
+              className="w-full p-2 rounded-lg border border-gray-300 focus:ring focus:ring-blue-500"
               rows={4}
               placeholder="Sua mensagem"
             ></textarea>
@@ -52,7 +58,7 @@ const Contact = () => {
         {/* Links de Redes Sociais */}
         <div className="text-center">
           <p className="text-lg mb-4">Siga-me nas redes sociais:</p>
-          <div className="flex justify-center space-x-6 text-2xl">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 text-2xl">
             <a
               href="https://wa.me/seu-numero"
               target="_blank"
@@ -80,17 +86,14 @@ const Contact = () => {
               <FaFacebookSquare />
               Facebook
             </a>
-            
-
-              <a
+            <a
               href="https://www.youtube.com/@pibcidadeoperaria"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-blue-400 transition flex items-center gap-2"
             >
               <FaYoutube />
-                Youtude
-
+              YouTube
             </a>
           </div>
         </div>
