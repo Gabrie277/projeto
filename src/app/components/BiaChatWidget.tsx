@@ -123,7 +123,7 @@ export default function BiaChatWidget() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Escreva aqui..."
-              className="flex-1 border rounded px-3 py-2 text-sm"
+              className="flex-1 border rounded px-3 py-2 text-sm text-black placeholder-gray-500"
               onKeyDown={(e) => e.key === "Enter" && handleSend()}
             />
             <button
