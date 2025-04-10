@@ -10,7 +10,7 @@ const Contact = () => {
         {/* Informações de contato */}
         <div className="text-center mb-8 space-y-4">
           <p><strong>Telefone:</strong> (098) 3247-5431</p>
-          <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden border border-white">
+          <div className="w-full h-80 md:h-96 rounded-lg overflow-hidden border border-white">
             <iframe
               title="Localização no Google Maps"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.785164349293!2d-44.20548209662538!3d-2.576440819396951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f69b986d4c23ad%3A0x5cc2bd2e18c38aeb!2sPrimeira%20Igreja%20Batista%20em%20Cidade%20Oper%C3%A1ria!5e0!3m2!1spt-BR!2sbr!4v1744280260096!5m2!1spt-BR!2sbr"

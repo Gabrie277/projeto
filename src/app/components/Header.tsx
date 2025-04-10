@@ -12,7 +12,7 @@ const Header = () => {
     <>
       <header className="bg-gray-800 text-white fixed w-full z-50 shadow-md">
         <div className="container mx-auto flex justify-between items-center p-5">
-          <h1 className="text-3xl font-bold">Meu Portfólio</h1>
+          <h1 className="text-3xl font-bold">PIBCOc:\Users\Win\Downloads\coral.jpeg</h1>
 
           {/* Botão hamburguer (mobile) */}
           <button
