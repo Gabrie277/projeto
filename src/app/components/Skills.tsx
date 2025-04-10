@@ -1,3 +1,5 @@
+import { CgAlbum } from "react-icons/cg";
+
 const Skills = () => {
   return (
     <section id="skills" className="bg-gray-100 text-gray-800 py-10">
@@ -7,12 +9,19 @@ const Skills = () => {
         {/* Cultos da PIBCO */}
         <div className="mb-10">
           <h3 className="text-2xl font-bold mb-4">Cultos da PIBCO</h3>
-          <ul className="list-disc pl-5 space-y-2">
-            <li>Culto de Oração – Quarta, às 19h</li>
-            <li>Culto de Doutrina – Quinta, às 19h</li>
-            <li>Culto da Juventude – Sábado, às 18h</li>
-            <li>Escola Bíblica – Domingo, às 8h</li>
-            <li>Culto de Adoração – Domingo, às 18h</li>
+          <ul className="space-y-2">
+            {[
+              "Culto de Oração – Quarta, às 19h",
+              "Culto de Doutrina – Quinta, às 19h",
+              "Culto da Juventude – Sábado, às 18h",
+              "Escola Bíblica – Domingo, às 8h",
+              "Culto de Adoração – Domingo, às 18h"
+            ].map((item, index) => (
+              <li key={index} className="flex items-start gap-2">
+                <CgAlbum className="text-blue-600 mt-1" />
+                <span>{item}</span>
+              </li>
+            ))}
           </ul>
         </div>
 
