@@ -84,7 +84,7 @@ export default function BiaChatWidget() {
           <MessageCircle />
         </button>
       ) : (
-        <div className="bg-green w-80 h-96 rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-green-300">
+        <div className="bg-white w-80 h-96 rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-green-300">
           {/* Header */}
           <div className="bg-green-500 text-white flex items-center px-4 py-2 gap-3">
             <img
@@ -99,7 +99,7 @@ export default function BiaChatWidget() {
           </div>
 
           {/* Mensagens */}
-          <div className="flex-1 p-4 space-y-2 overflow-y-auto text-sm">
+          <div className="flex-1 p-4 space-y-2 overflow-y-auto text-sm bg-white">
             {messages.map((msg, i) => (
               <div key={i} className={msg.from === "user" ? "text-right" : "text-left"}>
                 <span
@@ -117,7 +117,7 @@ export default function BiaChatWidget() {
           </div>
 
           {/* Input */}
-          <div className="border-t p-2 flex gap-2">
+          <div className="border-t p-2 flex gap-2 bg-white">
             <input
               type="text"
               value={input}
@@ -128,7 +128,7 @@ export default function BiaChatWidget() {
             />
             <button
               onClick={handleSend}
-              className="bg-green-500 text-white px-4 rounded hover:bg-greengreen-600 text-sm"
+              className="bg-green-500 text-white px-4 rounded hover:bg-green-600 text-sm"
             >
               Enviar
             </button>

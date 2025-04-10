@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <title>Solução de Tecnologia</title>
+        <title>PIBCO</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta name="description" content="Soluções de tecnologia sob medida para o seu negócio." />

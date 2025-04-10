@@ -1,6 +1,4 @@
 
-
-
 import { FaWhatsapp, FaInstagram, FaFacebookSquare, FaYoutube } from "react-icons/fa";
 
 const Contact = () => {
@@ -9,55 +7,26 @@ const Contact = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-8">Entre em Contato</h2>
 
-        {/* Formulário de Contato */}
-        <form className="w-full max-w-md md:max-w-xl mx-auto mb-8">
-          <div className="mb-4">
-            <label htmlFor="name" className="block text-sm font-medium mb-1">
-              Nome
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              className="w-full p-2 rounded-lg border border-gray-300 focus:ring focus:ring-blue-500"
-              placeholder="Seu nome"
-            />
+        {/* Informações de contato */}
+        <div className="text-center mb-8 space-y-4">
+          <p><strong>Telefone:</strong> (098) 3247-5431</p>
+          <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden border border-white">
+            <iframe
+              title="Localização no Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.035612445252!2d-43.211!3d-2.530!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x0000000000000000!2sLocal%20Exemplo!5e0!3m2!1spt-BR!2sbr!4v0000000000000"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium mb-1">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="w-full p-2 rounded-lg border border-gray-300 focus:ring focus:ring-blue-500"
-              placeholder="Seu email"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="message" className="block text-sm font-medium mb-1">
-              Mensagem
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              className="w-full p-2 rounded-lg border border-gray-300 focus:ring focus:ring-blue-500"
-              rows={4}
-              placeholder="Sua mensagem"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition"
-          >
-            Enviar
-          </button>
-        </form>
+        </div>
 
-        {/* Links de Redes Sociais */}
-        <div className="text-center">
-          <p className="text-lg mb-4">Siga-me nas redes sociais:</p>
+        {/* Redes sociais */}
+        <div className="text-center mt-10">
+          <p className="text-lg mb-4">Siga-nos nas redes sociais:</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 text-2xl">
             <a
               href="https://wa.me/seu-numero"
