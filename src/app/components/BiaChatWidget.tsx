@@ -45,9 +45,20 @@ export default function BiaChatWidget() {
       case 2:
         setUserData((prev) => ({ ...prev, motivo: input }));
         biaResponse =
-          "Obrigada pelas informações! Podemos agendar um horário para você. Qual dia e hora seria melhor pra você?";
+          "Obrigada pelas informações! Podemos agendar um horário para você. Qual dia seria melhor pra você, segunda, terça, quarta, quinta, sexta?";
         break;
-      case 3:
+        case 3:
+          setUserData((prev) => ({ ...prev, motivo: input }));
+          biaResponse =
+            "Obrigada pelas informação! hora seria melhor pra você?";
+          break;
+  
+
+
+
+
+
+      case 4:
         setUserData((prev) => ({ ...prev, horario: input }));
         biaResponse = `Perfeito! Vou agendar para ${input}. A pessoa responsável irá te contactar em breve.`;
 

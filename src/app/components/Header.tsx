@@ -38,11 +38,11 @@ const Header = () => {
 
           {/* Menu Desktop */}
           <nav className="hidden md:block">
-            <ul className="flex space-x-4">
-              <li><a href="#hero" className="hover:text-gray-300">Início</a></li>
-              <li><a href="#skills" className="hover:text-gray-300">Programação</a></li>
-              <li><a href="#projects" className="hover:text-gray-300">Projetos</a></li>
-              <li><a href="#contact" className="hover:text-gray-300">Contato</a></li>
+            <ul className="flex space-x-6 text-lg">
+              <li><a href="#hero" className="hover:text-gray-300 transition">Início</a></li>
+              <li><a href="#skills" className="hover:text-gray-300 transition">Programação</a></li>
+              <li><a href="#projects" className="hover:text-gray-300 transition">Projetos</a></li>
+              <li><a href="#contact" className="hover:text-gray-300 transition">Contato</a></li>
             </ul>
           </nav>
         </div>
@@ -61,17 +61,17 @@ const Header = () => {
           </button>
         </div>
         <ul className="space-y-4 text-lg">
-          <li><a onClick={fecharMenu} href="#hero" className="hover:text-gray-300">Início</a></li>
-          <li><a onClick={fecharMenu} href="#skills" className="hover:text-gray-300">Programação</a></li>
-          <li><a onClick={fecharMenu} href="#projects" className="hover:text-gray-300">Projetos</a></li>
-          <li><a onClick={fecharMenu} href="#contact" className="hover:text-gray-300">Contato</a></li>
+          <li><a onClick={fecharMenu} href="#hero" className="hover:text-gray-300 transition">Início</a></li>
+          <li><a onClick={fecharMenu} href="#skills" className="hover:text-gray-300 transition">Programação</a></li>
+          <li><a onClick={fecharMenu} href="#projects" className="hover:text-gray-300 transition">Projetos</a></li>
+          <li><a onClick={fecharMenu} href="#contact" className="hover:text-gray-300 transition">Contato</a></li>
         </ul>
       </div>
 
       {/* Overlay escuro ao fundo */}
       {menuAberto && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 backdrop-blur-sm transition-opacity duration-300"
           onClick={fecharMenu}
         />
       )}
