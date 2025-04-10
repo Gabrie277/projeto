@@ -15,6 +15,7 @@ export default function BiaChatWidget() {
     nome: "",
     contato: "",
     motivo: "",
+    semana: "",
     horario: "",
   });
 
@@ -44,22 +45,15 @@ export default function BiaChatWidget() {
         break;
       case 2:
         setUserData((prev) => ({ ...prev, motivo: input }));
-        biaResponse =
-          "Obrigada pelas informações! Podemos agendar um horário para você. Qual dia seria melhor pra você, segunda, terça, quarta, quinta, sexta?";
+        biaResponse = `Obrigada pelas informações! Podemos agendar um horário para você. Qual dia seria melhor pra você, segunda, terça, quarta, quinta, sexta?`;
         break;
-        case 3:
-          setUserData((prev) => ({ ...prev, motivo: input }));
-          biaResponse =
-            "Obrigada pelas informação! hora seria melhor pra você?";
-          break;
-  
-
-
-
-
-
+      case 3:
+        setUserData((prev) => ({ ...prev, semana: input }));
+        biaResponse = `Perfeito. E qual horário seria melhor pra você?`;
+        break;
       case 4:
-        setUserData((prev) => ({ ...prev, horario: input }));
+        const finalData = { ...userData, horario: input };
+        setUserData(finalData);
         biaResponse = `Perfeito! Vou agendar para ${input}. A pessoa responsável irá te contactar em breve.`;
 
         setTimeout(() => {
@@ -67,7 +61,7 @@ export default function BiaChatWidget() {
             ...prev,
             {
               from: "bia",
-              text: `🔎 *Resumo do atendimento:*\n- Nome: ${userData.nome}\n- Contato: ${userData.contato}\n- Motivo: ${userData.motivo}\n- Horário: ${input}`,
+              text: `🔎 *Resumo do atendimento:*\n- Nome: ${finalData.nome}\n- Contato: ${finalData.contato}\n- Motivo: ${finalData.motivo}\n- Dia da semana: ${finalData.semana}\n- Horário: ${finalData.horario}`,
             },
           ]);
         }, 1000);
